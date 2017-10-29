@@ -16,33 +16,9 @@ Licence URI: http://www.os-templates.com/template-terms
     <title>Pleeness</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link href="css/main.css" rel="stylesheet" type="text/css" media="all">
+    <link href="/css/main.css" rel="stylesheet" type="text/css" media="all">
 </head>
 <body id="top">
-    <!-- ################################################################################################ -->
-    <!-- ################################################################################################ -->
-    <!-- ################################################################################################ -->
-    <div class="wrapper row0">
-        <div id="topbar" class="hoc clear">
-            <!-- ################################################################################################ -->
-            <div class="fl_left">
-                <ul class="nospace inline pushright">
-                    <li><i class="fa fa-phone"></i> +00 (123) 456 7890</li>
-                    <li><i class="fa fa-envelope-o"></i> info@domain.com</li>
-                </ul>
-            </div>
-            <div class="fl_right">
-                <ul class="nospace inline pushright">
-                    <li><i class="fa fa-sign-in"></i> <a href="#">Login</a></li>
-                    <li><i class="fa fa-user"></i> <a href="#">Register</a></li>
-                </ul>
-            </div>
-            <!-- ################################################################################################ -->
-        </div>
-    </div>
-    <!-- ################################################################################################ -->
-    <!-- ################################################################################################ -->
-    <!-- ################################################################################################ -->
     <div class="wrapper row1">
         <header id="header" class="hoc clear">
             <!-- ################################################################################################ -->
@@ -68,36 +44,17 @@ Licence URI: http://www.os-templates.com/template-terms
         <nav id="mainav" class="hoc clear">
             <!-- ################################################################################################ -->
             <ul class="clear">
-                <li class="active"><a href="index.html">Home</a></li>
+                <li class="active"><a href="/">Home</a></li>
                 <li>
-                    <a class="drop" href="#">Pages</a>
+                    <a class="drop" href="#">Artykuły</a>
                     <ul>
-                        <li><a href="pages/gallery.html">Gallery</a></li>
-                        <li><a href="pages/full-width.html">Full Width</a></li>
-                        <li><a href="pages/sidebar-left.html">Sidebar Left</a></li>
-                        <li><a href="pages/sidebar-right.html">Sidebar Right</a></li>
-                        <li><a href="pages/basic-grid.html">Basic Grid</a></li>
+                        <li><a href="/articles-listing/1-article/">Pierwszy artykuł</a></li>
+                        <li><a href="/articles-listing/">Wszystkie</a></li>
                     </ul>
                 </li>
-                <li>
-                    <a class="drop" href="#">Dropdown</a>
-                    <ul>
-                        <li><a href="#">Level 2</a></li>
-                        <li>
-                            <a class="drop" href="#">Level 2 + Drop</a>
-                            <ul>
-                                <li><a href="#">Level 3</a></li>
-                                <li><a href="#">Level 3</a></li>
-                                <li><a href="#">Level 3</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="#">Level 2</a></li>
-                    </ul>
-                </li>
-                <li><a href="#">Link Text</a></li>
-                <li><a href="#">Link Text</a></li>
-                <li><a href="#">Link Text</a></li>
-                <li><a href="#">Long Link Text</a></li>
+                <li><a href="#">O mnie</a></li>
+                <li><a href="https://github.com/InesBielecka">GitHub</a></li>
+                <li><a href="#">Video</a></li>
             </ul>
             <!-- ################################################################################################ -->
         </nav>
@@ -107,9 +64,6 @@ Licence URI: http://www.os-templates.com/template-terms
     <!-- ################################################################################################ -->
    @RenderBody()
     
-    @*BODY*@
-    
-     
     @*FOOTER*@
     <div class="wrapper row5">
 
@@ -130,6 +84,10 @@ Licence URI: http://www.os-templates.com/template-terms
                     <li><a class="faicon-rss" href="#"><i class="fa fa-rss"></i></a></li>
                 </ul>
             </div>
+
+            @*można zrobić coś zamiasy newslettera, to: "Powiadom mnie o nowym artykule" i wspisuje się swojego maila i za każdym nowym
+            artykułem leci email*@
+
             <div class="one_half">
                 <h6 class="title">Newsletter subscription</h6>
                 <form class="clear" method="post" action="#">

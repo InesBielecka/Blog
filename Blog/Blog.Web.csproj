@@ -375,6 +375,7 @@
     <Content Include="config\Lang\ru-RU.user.xml" />
     <Content Include="config\Lang\sv-SE.user.xml" />
     <Content Include="config\Lang\zh-CN.user.xml" />
+    <Content Include="css\custom.css" />
     <Content Include="css\main.css" />
     <Content Include="default.aspx" />
     <Content Include="Global.asax" />
@@ -420,6 +421,8 @@
     <Content Include="App_Plugins\uSync\package.manifest" />
     <Content Include="Views\HomePage.cshtml" />
     <Content Include="Views\Layout.cshtml" />
+    <Content Include="Views\ArticlesListPage.cshtml" />
+    <Content Include="Views\ArticlesPage.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -438,6 +441,12 @@
   <ItemGroup>
     <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.1.0.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.Analyzers.dll" />
     <Analyzer Include="..\packages\Microsoft.CodeAnalysis.Analyzers.1.0.0\analyzers\dotnet\cs\Microsoft.CodeAnalysis.CSharp.Analyzers.dll" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Blog.Logic\Blog.Logic.csproj">
+      <Project>{b6359ce0-530e-4370-aafd-6604c4aa520d}</Project>
+      <Name>Blog.Logic</Name>
+    </ProjectReference>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

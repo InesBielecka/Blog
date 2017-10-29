@@ -1,0 +1,15 @@
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
+@using ContentModels = Umbraco.Web.PublishedContentModels;
+@using Blog.Logic.Models.Pages;
+@using Our.Umbraco.Ditto;
+@{
+    Layout = "Layout.cshtml";
+    var poco = Model.Content.As<Blog.Logic.Models.Pages.ArticlesPage>();
+}
+<div class="container">
+    <div class="row">
+        <h2>@poco.ArticleInfo</h2>
+        <p>@Html.Raw(poco.ArticleContent)</p>
+    </div>
+
+</div>
