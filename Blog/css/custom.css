@@ -4,3 +4,96 @@ background-repeat:no-repeat;
 background-size:contain;
 background-position:center;
 }
+
+.container {
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+}
+.navbar-default
+{
+    border-color:gainsboro;
+    background-color:#464646;
+    border-color: #464646;
+}
+.navbar-fixed-top {
+  right: 80px;
+  left: 80px;
+}
+.navbar-default .navbar-nav > li > a {
+  color: #3eafbf;
+}
+
+.navbar-default .navbar-nav > li > a:hover,
+.navbar-default .navbar-nav > li > a:focus {
+  background-color: #3eafbf;
+  color:#464646;
+}
+.navbar-default .navbar-nav > .active > a
+{
+  background-color:#3eafbf;
+}
+.navbar-default .navbar-nav > .active > a:hover
+
+{
+    color:#3eafbf;
+    background-color: #464646;
+}
+.navbar-form {
+    width: auto;
+    padding-top: 0;
+    padding-bottom: 0;
+    margin-right: 0;
+    margin-left: 0;
+    border: 0;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+  }
+.btn-default:hover,
+.btn-default {
+    color: #3eafbf;
+    background-color: #464646;
+    border-color: #464646;
+}
+.well {
+  margin-bottom: 20px;
+  margin-top: 350px;
+  padding: inherit;
+ background-color: rgba(245, 245, 245, 0.6);
+  -webkit-box-shadow: inset 0 1px 1px #3eafbf;
+          box-shadow: inset 0 1px 1px #3eafbf;
+}
+.dropdown-menu {
+  background-color: #464646;
+}
+.dropdown-menu > li > a {
+  color: #3eafbf;
+}
+
+.dropdown-menu > li > a:hover,
+.dropdown-menu > li > a:focus {
+  color: #464646;
+  background-color: #3eafbf;
+}
+html {
+    background: url(/Images/PB040769.JPG) no-repeat center center fixed;
+    background-size: cover;
+}
+body {
+  background-color: transparent;
+}
+
+.btn-default:focus,
+.btn-default:active,
+.btn-default.active,
+.open .dropdown-toggle.btn-default {
+  color: #464646;
+  background-color: #3eafbf;
+  border-color: #3eafbf;
+}
+
+body
+{
+    padding-top: 50px;
+}

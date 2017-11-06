@@ -1,34 +1,22 @@
-﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage<ContentModels.HomePage>
+﻿@inherits Umbraco.Web.Mvc.UmbracoTemplatePage
 @using ContentModels = Umbraco.Web.PublishedContentModels;
 @{
-	Layout = "Layout.cshtml";
+    Layout = "Layout.cshtml";
 }
-
-<div class="wrapper bgded custom-background-image" style="background-image:url('/media/1001/4835862-ksiazki-900-599.jpg');">
-    <div id="pageintro" class="hoc clear">
-        <!-- ################################################################################################ -->
-        <article>
-            <div class="overlay inspace-30 btmspace-30">
-                <h2 class="heading">Phasellus elementum sem</h2>
-                <p>Eget euismod dui ultricies eget nec ornare enim vivamus volutpat vehicula massa quis ut euismod eget orci ac molestie integer porttitor laoreet vestibulum sed id metus hendrerit euismod.</p>
+<div class="contaier">
+    <div class="container">
+        <div class="row">
+            <div style="margin-top:300px"class="col-lg-2">
+                <h1><font face="Courier" color="white"><b>Od zera do...developera</b></font></h1>
             </div>
-            <footer>
-                <ul class="nospace inline pushright">
-                    <li><a class="btn" href="#">Vestibulum</a></li>
-                    <li><a class="btn inverse" href="#">Aliquam</a></li>
-                </ul>
-            </footer>
-        </article>
-        <!-- ################################################################################################ -->
-    </div>
-</div>
-<div class="wrapper bgded overlay" style="background-image:url('images/demo/backgrounds/02.png');">
-    <div class="hoc container clear">
-        <!-- ################################################################################################ -->
-        <article class="center">
-            <footer>
-            </footer>
-        </article>
-        <!-- ################################################################################################ -->
+            <div class="col-lg-6 col-lg-offset-4">
+                <a href="#">
+                    <div class="well">
+                        <h2 class="text-center">Article title</h2>
+                        <p class="text-center">Article short content</p>
+                    </div>
+                </a>
+            </div>
+        </div>
     </div>
 </div>
