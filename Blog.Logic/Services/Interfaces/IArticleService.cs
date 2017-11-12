@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Blog.Logic.Models.Pages;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,6 @@ namespace Blog.Logic.Services.Interfaces
 {
    public interface IArticleService
     {
-         ArticlePage GetLastArticle();
+         ArticlesPage GetLastArticle();
     }
 }

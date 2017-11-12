@@ -4,75 +4,14 @@
 @{
     Layout = "Layout.cshtml";
 }
-<div class="wrapper row2">
-    <nav id="mainav" class="hoc clear">
-        <!-- ################################################################################################ -->
-        <ul class="clear">
-            <li class="active"><a href="#"><i class="fa fa-home fa-2x" aria-hidden="true"></i></a></li>
-            @foreach (var item in UmbracoAssist.GetSettings().Navigation)
-            {
-                if (!item.Link2lvl.Any())
-                {
-                    <li><a href="@item.Link1lvl.Url" target="@item.Link1lvl.Target">@item.MenuTitle</a></li>
-                }
-                else
-                {
-                    <li>
-                        <a class="drop" href="#">@item.MenuTitle</a>
-                        <ul>
-                            @foreach (var lvl2 in item.Link2lvl)
-                            {
-                                <li><a href="@lvl2.Url"target="@lvl2.Target">@lvl2.Name</a></li>
-                            }
-                        
-                        </ul>
-                    </li>
-                }
-            }
-            @*<li><a href="#">O mnie</a></li>
-            <li>
-                <a class="drop" href="#">Artykuły</a>
-                <ul>
-                    <li><a href="#">Wszystkie</a></li>
-                    <li><a href="#">Ostatni</a></li>
-                </ul>
-            </li>
-            <li><a href="#">GitHub</a></li>
-            <li><a href="#">Zdjęcia</a></li>*@
-        </ul>
-        <!-- ################################################################################################ -->
-    </nav>
-</div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<div class="wrapper bgded" style="background-image: url('../Images/PB040769.JPG');">
-    <div id="pageintro" class="hoc clear">
-        <!-- ################################################################################################ -->
-        <article>
-            <div class="overlay inspace-30 btmspace-30">
-                <h2 class="heading">Article content</h2>
-                <p>Eget euismod dui ultricies eget nec ornare enim vivamus volutpat vehicula massa quis ut euismod eget orci ac molestie integer porttitor laoreet vestibulum sed id metus hendrerit euismod.</p>
-            </div>
-            <footer>
-                <ul class="nospace inline pushright">
-                    <li><a class="btn" href="#">Więcej</a></li>
-                </ul>
-            </footer>
-        </article>
-        <!-- ################################################################################################ -->
-    </div>
-</div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
+@Html.GetGridHtml(Model.Content, "matrixContent")
+@*@Html.Action("RenderLatestArticle", "ArticleSurface")*@
 <!-- ################################################################################################ -->
 <div class="wrapper row3">
     <main class="hoc container clear">
         <!-- main body -->
         <!-- ################################################################################################ -->
         <div class="center btmspace-50">
-            <h2 class="heading">Justo non pulvinar</h2>
-            <p>Elit nullam facilisis est quis justo viverra hendrerit donec euismod fringilla justo a auctor.</p>
         </div>
         <article class="one_third first btmspace-50">
             <h3 class="font-x1 btmspace-30"><i class="fa fa-2x fa-500px rightspace-10"></i> <a href="#">Article title</a></h3>
@@ -98,32 +37,16 @@
             <h3 class="font-x1 btmspace-30"><i class="fa fa-2x fa-pied-piper-alt rightspace-10"></i> <a href="#">Article title</a></h3>
             <p>Elit nisi tincidunt bibendum lectus condimentum non etiam pulvinar erat et tristique tempor nisi lectus ultricies sapien bibendum interdum sapien&hellip;</p>
         </article>
-        <!-- ################################################################################################ -->
-        <!-- / main body -->
         <div class="clear"></div>
     </main>
 </div>
 <!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<div id="omnie" class="wrapper bgded overlay" style="background-image:url('images/demo/backgrounds/02.png');">
-    <div class="hoc container clear">
-        <!-- ################################################################################################ -->
-        <article class="center">
-            <h2 class="font-x3 uppercase">Lacus ligula malesuada</h2>
-            <p class="btmspace-50">Ac egestas at justo quisque lobortis ipsum sapien sed lacinia libero</p>
-            <footer>
-                <ul class="nospace inline pushright">
-                    <li><a class="btn inverse" href="#">Convallis</a></li>
-                    <li><a class="btn" href="#">Vestibulum</a></li>
-                </ul>
-            </footer>
-        </article>
-        <!-- ################################################################################################ -->
-    </div>
-</div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
+
+
+
+
+
+
 <!-- ################################################################################################ -->
 <div class="wrapper row3">
     <section class="hoc container clear">
@@ -179,8 +102,5 @@
         <!-- ################################################################################################ -->
     </section>
 </div>
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
-<!-- ################################################################################################ -->
 <div class="wrapper row4 bgded overlay" style="background-image:url('images/demo/backgrounds/03.png');">
 </div>

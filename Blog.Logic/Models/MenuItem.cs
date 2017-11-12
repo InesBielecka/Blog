@@ -13,6 +13,7 @@ namespace Blog.Logic.Models
 
         public Link Link1lvl { get; set; }
         public IEnumerable<Link> Link2lvl { get; set; }
+        public IEnumerable<Link> Link3lvl { get; set; }
 
     }
 }

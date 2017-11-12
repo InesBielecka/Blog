@@ -1,0 +1,19 @@
+﻿@model Blog.Logic.Models.Pages.ArticlesPage
+
+<div class="wrapper bgded" style="background-image: url('../Images/PB040769.JPG');">
+    <div id="pageintro" class="hoc clear">
+        <!-- ################################################################################################ -->
+        <article>
+            <div class="overlay inspace-30 btmspace-30">
+                <h2 class="heading">@Model.ArticleInfo</h2>
+                <p>@Html.Raw(umbraco.library.TruncateString(Model.ArticleContent, 200,"..."))</p>
+            </div>
+            <footer>
+                <ul class="nospace inline pushright">
+                    <li><a class="btn" href="@Model.Url">Więcej</a></li>
+                </ul>
+            </footer>
+        </article>
+        <!-- ################################################################################################ -->
+    </div>
+</div>

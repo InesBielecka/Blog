@@ -94,6 +94,10 @@
       <HintPath>..\packages\UmbracoCms.Core.7.7.4\lib\net45\interfaces.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="Lecoati.LeBlender.Extension, Version=1.0.8.4, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Lecoati.LeBlender.1.0.8.4\lib\Lecoati.LeBlender.Extension.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
       <HintPath>..\packages\UmbracoCms.Core.7.7.4\lib\net45\log4net.dll</HintPath>
       <Private>True</Private>
@@ -158,6 +162,10 @@
       <HintPath>..\packages\MiniProfiler.2.1.0\lib\net40\MiniProfiler.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="MoreLinq, Version=2.8.21218.0, Culture=neutral, PublicKeyToken=384d532d7e88985d, processorArchitecture=MSIL">
+      <HintPath>..\packages\morelinq.2.8.0\lib\net40\MoreLinq.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="MySql.Data, Version=6.9.10.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>..\packages\MySql.Data.6.9.10\lib\net45\MySql.Data.dll</HintPath>
       <Private>True</Private>
@@ -206,6 +214,10 @@
     <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Threading.Tasks.Dataflow, Version=4.6.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Threading.Tasks.Dataflow.4.7.0\lib\portable-net45+win8+wpa81\System.Threading.Tasks.Dataflow.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.ValueTuple, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.4.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
@@ -290,18 +302,49 @@
     <Compile Include="Controllers\Surface\BaseSurfaceController.cs" />
     <Compile Include="Helpers\SiteHelper.cs" />
     <Compile Include="Helpers\UmbracoAssist.cs" />
+    <Compile Include="Models\AboutMe.cs" />
+    <Compile Include="Models\ContentItem.cs" />
+    <Compile Include="Models\MediaImage.cs" />
     <Compile Include="Models\MenuItem.cs" />
     <Compile Include="Models\Pages\ArticlesPage.cs" />
     <Compile Include="Models\SiteSettings.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Services\Interfaces\ArticlePage.cs" />
+    <Compile Include="Services\ArticleService.cs" />
     <Compile Include="Services\Interfaces\IArticleService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="App_Plugins\LeBlender\editors\leblendereditor\views\Base.cshtml" />
+    <None Include="App_Plugins\LeBlender\editors\leblendereditor\views\LeBlender.cshtml" />
+    <None Include="App_Plugins\LeBlender\package.manifest" />
+    <None Include="App_Plugins\LeBlender\views_samples\Carousel.cshtml" />
+    <None Include="App_Plugins\LeBlender\views_samples\Highlight.cshtml" />
+    <None Include="App_Plugins\LeBlender\views_samples\Tabs.cshtml" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Plugins\LeBlender\backoffice\GridEditorManager\delete.html" />
+    <Content Include="App_Plugins\LeBlender\backoffice\GridEditorManager\delete.js" />
+    <Content Include="App_Plugins\LeBlender\backoffice\GridEditorManager\edit.html" />
+    <Content Include="App_Plugins\LeBlender\backoffice\GridEditorManager\edit.js" />
+    <Content Include="App_Plugins\LeBlender\backoffice\GridEditorManager\sort.html" />
+    <Content Include="App_Plugins\LeBlender\backoffice\GridEditorManager\sort.js" />
+    <Content Include="App_Plugins\LeBlender\common\directive\blendereditorwrapper.js" />
+    <Content Include="App_Plugins\LeBlender\common\directive\layersresizabledraggable.js" />
+    <Content Include="App_Plugins\LeBlender\common\directive\propertygrideditorwrapper.js" />
+    <Content Include="App_Plugins\LeBlender\common\filter\orderobjectby.filter.js" />
+    <Content Include="App_Plugins\LeBlender\common\services\requesthelper.service.js" />
+    <Content Include="App_Plugins\LeBlender\editors\leblendereditor\assets\parameterconfig.css" />
+    <Content Include="App_Plugins\LeBlender\editors\leblendereditor\dialogs\parameterconfig.controller.js" />
+    <Content Include="App_Plugins\LeBlender\editors\leblendereditor\dialogs\parameterconfig.html" />
+    <Content Include="App_Plugins\LeBlender\editors\leblendereditor\dialogs\parameterconfig.prevalues.controller.js" />
+    <Content Include="App_Plugins\LeBlender\editors\leblendereditor\dialogs\parameterconfig.prevalues.html" />
+    <Content Include="App_Plugins\LeBlender\editors\leblendereditor\leblendereditor.controller.js" />
+    <Content Include="App_Plugins\LeBlender\editors\leblendereditor\leblendereditor.html" />
+    <Content Include="App_Plugins\LeBlender\editors\leblendereditor\leblenderproperties.controller.js" />
+    <Content Include="App_Plugins\LeBlender\editors\leblendereditor\leblenderproperties.html" />
+    <Content Include="App_Plugins\LeBlender\editors\textstring\textstringconfig.html" />
+    <Content Include="App_Plugins\LeBlender\views_samples\sample_styles.css" />
     <Content Include="App_Plugins\RJP.MultiUrlPicker\MultiUrlPicker.html" />
     <Content Include="App_Plugins\RJP.MultiUrlPicker\MultiUrlPicker.js" />
   </ItemGroup>

@@ -386,6 +386,7 @@
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
+    <Content Include="Images\20708372_1376701252407082_4711877651730027195_n.jpg" />
     <Content Include="Images\PB040769.JPG" />
     <Content Include="Images\PB040770.JPG" />
     <Content Include="Images\PB040771.JPG" />
@@ -457,6 +458,11 @@
     <Content Include="fonts\glyphicons-halflings-regular.eot" />
     <Content Include="scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Partials\Main\Footer.cshtml" />
+    <Content Include="Views\ArticleSurface\LatestArticlePartial.cshtml" />
+    <Content Include="Views\ArticleSurface\LatestArticleMenuItemPartial.cshtml" />
+    <Content Include="Views\Partials\Grid\Editors\LastArticle.cshtml" />
+    <Content Include="Views\Partials\Grid\Editors\Article.cshtml" />
+    <Content Include="Views\Partials\Grid\Editors\AboutMeSection.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

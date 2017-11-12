@@ -12,5 +12,6 @@ namespace Blog.Logic.Models.Pages
         public string ArticleInfo { get; set; }
         public string ArticleContent { get; set; }
         public string Url { get; set; }
+        public DateTime CreateDate { get; set; }
     }
 }

@@ -1,0 +1,27 @@
+﻿@inherits UmbracoViewPage<Lecoati.LeBlender.Extension.Models.LeBlenderModel>
+@using Blog.Logic.Models;
+@using Our.Umbraco.Ditto;
+
+@{
+    var umbracoHelper = new UmbracoHelper(UmbracoContext.Current);
+}
+
+@foreach(var item in Model.Items)
+{
+
+    var aboutMeTitle = item.GetValue("aboutMeTitle");
+    var aboutMeContent = item.GetValue("aboutMeContent");
+    var aboutMePick = item.GetValue("aboutMePick");
+    var image = umbracoHelper.TypedMedia(aboutMePick).As<MediaImage>();
+
+    <div id="omnie" class="wrapper bgded overlay" style="background-image:url('images/demo/backgrounds/02.png');">
+    <div class="hoc container clear">
+        <article class="center">
+            <img class="one_quarter rightspace-10 circle" src="@image.Url" />
+            <h2 class="font-x3 uppercase">@aboutMeTitle</h2>
+            <p align="justify" class="btmspace-50">@Html.Raw(aboutMeContent)</p>
+        </article>
+    </div>
+</div>
+    }
+

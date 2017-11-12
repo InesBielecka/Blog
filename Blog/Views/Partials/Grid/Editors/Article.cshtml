@@ -1,0 +1,38 @@
+﻿@inherits UmbracoViewPage<Lecoati.LeBlender.Extension.Models.LeBlenderModel>
+    @using Our.Umbraco.Ditto;
+
+
+@{ 
+    var umbracoHelper = new UmbracoHelper(UmbracoContext.Current);
+}
+
+
+
+
+    
+        <div class="wrapper row3">
+            <main class="hoc container clear">
+                <!-- main body -->
+                <!-- ################################################################################################ -->
+                <div class="center btmspace-50">
+                </div>
+@if (Model.Items.Any())
+{
+    foreach (var item in Model.Items)
+    {
+        var guid = item.GetValue("articleContent");
+        IPublishedContent content = umbracoHelper.TypedContent(item.GetValue("articleContent"));
+        //var poco = content.As<Blog.Logic.Models.Pages.ArticlesPage>
+        //    ();
+
+                    <article class="one_third">
+                        <h3 class="font-x1 btmspace-30"><i class="fa fa-2x fa-pied-piper-alt rightspace-10"></i> <a href="@poco.Url">@poco.ArticleInfo</a></h3>
+                        <p>@Html.Raw(umbraco.library.TruncateString(poco.ArticleContent, 200, "..."))</p>
+                    </article>
+                }
+}
+                    <div class="clear"></div>
+</main>
+        </div>
+    
+
